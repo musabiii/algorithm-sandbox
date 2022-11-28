@@ -9,16 +9,16 @@ namespace Algorithms.Sort
     {
         static public List<int> Run(List<int> ls)
         {
-            bool swapped = true;
+
+            bool swapped = false;
+
             int StartIndex = 0;
-            int EndIndex = ls.Count - 1;
+            int EndIndex = ls.Count() - 1;
 
             while (StartIndex < EndIndex)
             {
-                swapped = false;
 
                 int i = StartIndex;
-
                 while (i < EndIndex)
                 {
                     if (ls[i] > ls[i + 1])
@@ -28,7 +28,6 @@ namespace Algorithms.Sort
                         ls[i + 1] = m;
                         swapped = true;
                     }
-
                     i++;
                 }
 
@@ -36,7 +35,7 @@ namespace Algorithms.Sort
 
                 while (j > StartIndex)
                 {
-                    if (ls[j - 1] > ls[j])
+                    if (ls[j-1] > ls[j])
                     {
                         int m = ls[j];
                         ls[j] = ls[j - 1];
@@ -54,8 +53,6 @@ namespace Algorithms.Sort
                 StartIndex++;
                 EndIndex--;
             }
-
-
             return ls;
 
         }
