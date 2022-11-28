@@ -1,4 +1,5 @@
-﻿using Algorithms.Sort;
+﻿global using Algorithms.Utils;
+using Algorithms.Sort;
 Console.WriteLine("Hello, World!");
 
 // BubbleSort.Run();

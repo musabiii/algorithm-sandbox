@@ -19,9 +19,7 @@ namespace Algorithms.Sort
                 {
                     if (ls[i] > ls[i + gap])
                     {
-                        int m = ls[i];
-                        ls[i] = ls[i + gap];
-                        ls[i + gap] = m;
+                        Tools.Swap(ls,i,i+gap);
                         sorted = false;
                     }
                     i++;

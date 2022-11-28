@@ -13,11 +13,10 @@ namespace Algorithms.Sort
             {
                 for (int j = 0; j < ls.Count - i - 1; j++)
                 {
-                    if (ls[j] < ls[j + 1])
+                    if (ls[j] > ls[j + 1])
                     {
-                        int m = ls[j];
-                        ls[j] = ls[j + 1];
-                        ls[j + 1] = m;
+
+                        Tools.Swap(ls,j,j+1);
                     }
                 }
             }

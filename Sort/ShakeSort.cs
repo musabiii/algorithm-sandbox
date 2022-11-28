@@ -23,9 +23,7 @@ namespace Algorithms.Sort
                 {
                     if (ls[i] > ls[i + 1])
                     {
-                        int m = ls[i];
-                        ls[i] = ls[i + 1];
-                        ls[i + 1] = m;
+                        Tools.Swap(ls, i, i + 1);
                         swapped = true;
                     }
                     i++;
@@ -35,11 +33,9 @@ namespace Algorithms.Sort
 
                 while (j > StartIndex)
                 {
-                    if (ls[j-1] > ls[j])
+                    if (ls[j - 1] > ls[j])
                     {
-                        int m = ls[j];
-                        ls[j] = ls[j - 1];
-                        ls[j - 1] = m;
+                        Tools.Swap(ls, j, j - 1);
                         swapped = true;
                     }
                     j--;
